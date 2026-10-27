@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mémento, des cours et des exercices classés par année, matière et thème.">
+  <meta name="theme-color" content="#f6f5f0">
+  <title>Mémento — Les cours à portée de main</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Mémento, accueil">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>Mémento<span class="brand-period">.</span></span>
+    </a>
+    <a class="header-link" href="#cours">Explorer les cours <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Apprendre, pas à pas</p>
+        <h1 id="page-title">Les cours qui<br><span>font tilt.</span></h1>
+        <p class="hero-description">Des leçons claires et des exercices pour avancer à ton rythme, une notion à la fois.</p>
+        <a class="button button-primary" href="./cours/cm2/mathematiques/nombres-naturels/">
+          Découvrir le cours <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="hero-art" aria-label="Illustration de nombres et d’un carnet" role="img">
+        <div class="art-sun"></div>
+        <div class="art-card art-card-back"><span>7 × 8</span><strong>?</strong></div>
+        <div class="art-card art-card-front">
+          <span class="art-label">PETIT RAPPEL</span>
+          <strong>1 000</strong>
+          <span class="art-rule"></span>
+          <span class="art-caption">C’est 10 centaines.</span>
+        </div>
+        <span class="art-spark spark-one">✳</span>
+        <span class="art-spark spark-two">✳</span>
+      </div>
+      <div class="hero-bottom">
+        <span>Des ressources pour comprendre</span>
+        <span class="hero-bottom-line"></span>
+        <span>CM2 et plus</span>
+      </div>
+    </section>
+
+    <section class="catalog" id="cours" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">La bibliothèque</p>
+          <h2 id="catalog-title">On commence par quoi ?</h2>
+        </div>
+        <p class="section-note">Choisis une matière et plonge dans le sujet.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrer les cours">
+        <label class="filter-label" for="year-filter">Année</label>
+        <select id="year-filter">
+          <option value="all">Toutes</option>
+          <option value="cm2" selected>CM2</option>
+        </select>
+        <label class="filter-label" for="subject-filter">Matière</label>
+        <select id="subject-filter">
+          <option value="all">Toutes</option>
+          <option value="mathematiques" selected>Mathématiques</option>
+        </select>
+        <span class="course-count" id="course-count" aria-live="polite">1 cours</span>
+      </div>
+
+      <div class="course-grid" id="course-list">
+        <a class="course-card" href="./cours/cm2/mathematiques/nombres-naturels/" data-year="cm2" data-subject="mathematiques">
+          <div class="course-card-top">
+            <span class="course-icon" aria-hidden="true">123</span>
+            <span class="course-arrow" aria-hidden="true">↗</span>
+          </div>
+          <div>
+            <p class="course-category">CM2 <span>/</span> Mathématiques</p>
+            <h3>Les nombres naturels</h3>
+            <p class="course-description">Lire, écrire, décomposer et comparer les grands nombres.</p>
+          </div>
+          <div class="course-card-bottom"><span>Leçon + exercices</span><span class="read-time">8 min</span></div>
+        </a>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">✳</span>
+          <p>Pas encore de cours dans cette sélection.</p>
+          <span>La bibliothèque va s’agrandir bientôt !</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="coming-soon" aria-label="Nouveaux cours">
+      <span class="coming-icon" aria-hidden="true">✳</span>
+      <p><strong>Un sujet te manque ?</strong> La bibliothèque va s’enrichir au fil du temps.</p>
+      <span class="coming-label">À SUIVRE</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="./"><span class="brand-mark" aria-hidden="true">M</span><span>Mémento<span class="brand-period">.</span></span></a>
+    <span>Un petit pas, une grande idée.</span>
+  </footer>
+
+  <script>
+    const yearFilter = document.querySelector("#year-filter");
+    const subjectFilter = document.querySelector("#subject-filter");
+    const courseCards = [...document.querySelectorAll(".course-card")];
+    const emptyState = document.querySelector("#empty-state");
+    const courseCount = document.querySelector("#course-count");
+
+    function filterCourses() {
+      const visibleCount = courseCards.filter((card) => {
+        const matchesYear = yearFilter.value === "all" || card.dataset.year === yearFilter.value;
+        const matchesSubject = subjectFilter.value === "all" || card.dataset.subject === subjectFilter.value;
+        card.hidden = !(matchesYear && matchesSubject);
+        return !card.hidden;
+      }).length;
+
+      emptyState.hidden = visibleCount > 0;
+      courseCount.textContent = `${visibleCount} ${visibleCount > 1 ? "cours" : "cours"}`;
+    }
+
+    yearFilter.addEventListener("change", filterCourses);
+    subjectFilter.addEventListener("change", filterCourses);
+  </script>
+</body>
+</html>
