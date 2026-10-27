@@ -1,0 +1,43 @@
+.addition-art {
+  margin: 15px auto 0;
+  display: grid;
+  justify-items: end;
+  color: var(--green-dark);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.addition-art span:nth-child(2) { width: 100%; padding-bottom: 5px; border-bottom: 2px solid #b8c8b7; }
+.addition-art strong { color: var(--orange); font-size: 1.8rem; }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+.property-card b { color: var(--ink); }
+
+.calculation {
+  width: fit-content;
+  min-width: 180px;
+  margin: 18px 0;
+  padding: 13px 22px;
+  display: grid;
+  justify-items: end;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--green-dark);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.55;
+}
+
+.calculation strong { width: 100%; padding-top: 5px; border-top: 2px solid #b8c8b7; color: var(--green-dark); text-align: right; }
+
+@media (max-width: 520px) {
+  .calculation { font-size: 1rem; }
+}
