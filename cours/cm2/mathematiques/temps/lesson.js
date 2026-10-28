@@ -10,7 +10,11 @@ const answers = {
   q7: "12",
   q8: "365",
   q9: "366",
-  q10: "2m30"
+  q10: "2m30",
+  q11: "4h15",
+  q12: "1h35",
+  q13: "4h15",
+  q14: "50min"
 };
 
 quiz.addEventListener("submit", (event) => {
@@ -20,7 +24,7 @@ quiz.addEventListener("submit", (event) => {
 
   if (unanswered.length > 0) {
     feedback.dataset.result = "incomplete";
-    feedback.textContent = "Réponds aux dix questions avant de vérifier.";
+    feedback.textContent = "Réponds aux quatorze questions avant de vérifier.";
     return;
   }
 
@@ -30,6 +34,6 @@ quiz.addEventListener("submit", (event) => {
   );
   feedback.dataset.result = "complete";
   feedback.textContent = score === Object.keys(answers).length
-    ? "Bravo, tout est juste ! Tu maîtrises les mesures du temps."
+    ? "Bravo, tout est juste ! Tu maîtrises les mesures du temps et le calcul des durées."
     : `${score} / ${Object.keys(answers).length} bonnes réponses. Relis les réponses et réessaie !`;
 });
