@@ -1,0 +1,51 @@
+.fraction-art {
+  margin: 15px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--green-dark);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.fraction-art strong { color: var(--orange); font-size: 1.5rem; }
+.fraction-art + p { margin-top: 16px; }
+
+.fraction {
+  min-width: 1.25em;
+  display: inline-grid;
+  justify-items: center;
+  vertical-align: middle;
+  color: var(--green-dark);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.fraction > span:first-child { width: 100%; padding: 0 0.18em 0.1em; border-bottom: 2px solid #b8c8b7; text-align: center; }
+.fraction > span:last-child { padding-top: 0.1em; }
+
+.fraction-examples { margin: 18px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+.fraction-card { padding: 17px; display: flex; align-items: center; gap: 15px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.fraction-card > .fraction { flex: 0 0 auto; font-size: 1.4rem; }
+.fraction-card p { margin: 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+.fraction-card p strong { color: var(--ink); }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+
+.compare-card { margin: 18px 0; padding: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); font-size: 1.3rem; }
+.compare-symbol { color: var(--orange); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.5rem; font-weight: 700; }
+.compare-card p { flex-basis: 100%; margin: 0; color: var(--muted); font-size: 0.75rem; line-height: 1.6; }
+
+@media (max-width: 520px) {
+  .fraction-examples { grid-template-columns: 1fr; }
+  .fraction-art { font-size: 1.2rem; }
+  .fraction-art strong { font-size: 1.35rem; }
+}
