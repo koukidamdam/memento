@@ -1,0 +1,29 @@
+.shape-hero svg { width: 100%; max-height: 160px; margin-top: 12px; }
+.shape-outline { stroke-width: 3; }
+.green-shape { fill: rgb(78 119 83 / 12%); stroke: var(--green); }
+.orange-shape { fill: rgb(201 119 67 / 10%); stroke: var(--orange); }
+.disk-fill { fill: rgb(78 119 83 / 17%); }
+.circle-outline { fill: none; stroke: var(--green-dark); stroke-width: 3; }
+.shape-point { fill: var(--orange); }
+.radius-line { stroke: var(--orange); stroke-width: 2; }
+.shape-hero text, .shape-figure text { fill: var(--ink); font-family: Manrope, "Segoe UI", sans-serif; font-size: 13px; font-weight: 700; }
+
+.shape-figure { margin: 18px 0; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.shape-figure svg { width: 100%; max-height: 190px; display: block; }
+.shape-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 0.72rem; line-height: 1.5; text-align: center; }
+.shape-figure figcaption strong { color: var(--green-dark); }
+.shape-grid, .circle-comparison { margin: 18px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.shape-grid .shape-figure, .circle-comparison .shape-figure { margin: 0; }
+.equal-side-mark, .parallel-mark { fill: none; stroke: var(--orange); stroke-width: 3; stroke-linecap: round; }
+.right-angle-mark { fill: none; stroke: var(--green-dark); stroke-width: 2; }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+
+@media (max-width: 520px) {
+  .shape-grid, .circle-comparison { grid-template-columns: 1fr; }
+  .shape-figure { padding: 10px; }
+}
