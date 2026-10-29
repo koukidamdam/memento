@@ -1,0 +1,30 @@
+.geometry-hero svg { width: 100%; max-height: 150px; margin-top: 13px; overflow: visible; }
+.geometry-hero text, .geometry-figure text { fill: var(--ink); font-family: Manrope, "Segoe UI", sans-serif; font-size: 15px; font-weight: 700; }
+
+.diagram-line { stroke: var(--green-dark); stroke-width: 3; stroke-linecap: round; }
+.green-line { stroke: var(--green); }
+.orange-line { stroke: var(--orange); }
+.diagram-point { fill: var(--orange); }
+.right-angle, .angle-arc { stroke: var(--green-dark); stroke-width: 2; }
+.arrow-head { fill: var(--green-dark); }
+.orange-line[marker-start] ~ .arrow-head { fill: var(--orange); }
+
+.geometry-figure { margin: 18px 0; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.geometry-figure svg { width: 100%; max-height: 145px; display: block; }
+.geometry-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 0.72rem; line-height: 1.5; text-align: center; }
+.geometry-diagrams { margin: 18px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.geometry-diagrams .geometry-figure { margin: 0; }
+.geometry-diagrams .geometry-figure:first-child:last-child { grid-column: 1 / -1; }
+.angle-figure { max-width: 420px; }
+.svg-definitions { width: 0; height: 0; position: absolute; overflow: hidden; }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+
+@media (max-width: 520px) {
+  .geometry-diagrams { grid-template-columns: 1fr; }
+  .geometry-diagrams .geometry-figure:first-child:last-child { grid-column: auto; }
+}
