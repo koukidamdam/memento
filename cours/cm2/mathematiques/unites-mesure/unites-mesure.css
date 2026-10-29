@@ -1,0 +1,32 @@
+.measure-art {
+  margin: 15px auto 0;
+  display: grid;
+  justify-items: center;
+  color: var(--green-dark);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.measure-art strong { color: var(--orange); }
+.measure-art + p { margin-top: 16px; }
+
+.unit-table-wrap { margin: 18px 0; overflow-x: auto; }
+.unit-table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--paper); text-align: center; }
+.unit-table caption { padding: 0 0 9px; color: var(--muted); font-size: 0.7rem; text-align: left; }
+.unit-table th, .unit-table td { padding: 11px 8px; border: 1px solid var(--line); }
+.unit-table th { color: var(--green-dark); background: #f0f1eb; font-family: Manrope, "Segoe UI", sans-serif; font-size: 0.9rem; font-weight: 700; }
+.unit-table td { color: #5f625b; font-size: 0.68rem; line-height: 1.5; }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+
+@media (max-width: 520px) {
+  .measure-art { font-size: 1rem; }
+  .unit-table { min-width: 580px; }
+  .unit-table th, .unit-table td { padding: 9px 6px; }
+}
