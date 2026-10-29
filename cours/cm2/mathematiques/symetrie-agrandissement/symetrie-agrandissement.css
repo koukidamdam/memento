@@ -1,0 +1,23 @@
+.transform-hero svg { width: 100%; max-height: 165px; margin-top: 12px; }
+.transform-hero text, .transform-figure text, .transform-example text { fill: var(--ink); font-family: Manrope, "Segoe UI", sans-serif; font-size: 13px; font-weight: 700; }
+.axis-line { stroke: #77796f; stroke-width: 2; stroke-dasharray: 6 5; }
+.shape-original { fill: rgb(78 119 83 / 17%); stroke: var(--green); stroke-width: 3; }
+.shape-reflection { fill: rgb(201 119 67 / 17%); stroke: var(--orange); stroke-width: 3; }
+.shape-enlarged { fill: rgb(78 119 83 / 17%); stroke: var(--green); stroke-width: 3; }
+.point-original { fill: var(--green-dark); }
+.point-reflection { fill: var(--orange); }
+
+.transform-figure, .transform-example { margin: 18px 0; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.transform-figure svg, .transform-example svg { width: 100%; max-height: 190px; display: block; }
+.transform-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 0.72rem; line-height: 1.5; text-align: center; }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+
+@media (max-width: 520px) {
+  .transform-figure, .transform-example { padding: 10px; }
+  .transform-figure svg, .transform-example svg { max-height: 160px; }
+}

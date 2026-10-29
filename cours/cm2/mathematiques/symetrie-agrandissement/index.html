@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cours de CM2 sur la symétrie axiale, l’agrandissement et la réduction des figures géométriques.">
+  <meta name="theme-color" content="#f6f5f0">
+  <title>Symétrie, agrandissement et réduction — Mémento CM2</title>
+  <link rel="stylesheet" href="../../../../style.css">
+  <link rel="stylesheet" href="../nombres-naturels/lesson.css">
+  <link rel="stylesheet" href="./symetrie-agrandissement.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../../" aria-label="Mémento, accueil">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>Mémento<span class="brand-period">.</span></span>
+    </a>
+    <a class="header-link" href="../../../../#cours"><span aria-hidden="true">←</span> Tous les cours</a>
+  </header>
+
+  <main class="lesson-page">
+    <nav class="breadcrumbs" aria-label="Fil d’Ariane">
+      <a href="../../../../">Accueil</a><span aria-hidden="true">/</span>
+      <a href="../../../../#cours">CM2</a><span aria-hidden="true">/</span>
+      <a href="../../../../#cours">Mathématiques</a><span aria-hidden="true">/</span>
+      <span aria-current="page">Symétrie, agrandissement et réduction</span>
+    </nav>
+
+    <section class="lesson-hero">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> CM2 · Mathématiques</p>
+        <h1>Symétrie et formes<br><span>qui changent.</span></h1>
+        <p class="lesson-intro">Construis le reflet d’une figure par rapport à un axe, puis découvre comment agrandir ou réduire une figure en conservant ses proportions.</p>
+        <div class="lesson-tags"><span>Leçon</span><span>15 min</span><span>12 exercices</span></div>
+      </div>
+      <div class="number-art transform-hero" aria-hidden="true">
+        <span class="number-art-label">REFLET ET PROPORTIONS</span>
+        <svg viewBox="0 0 240 145">
+          <line x1="120" y1="15" x2="120" y2="130" class="axis-line"></line>
+          <polygon points="35,105 75,35 105,105" class="shape-original"></polygon>
+          <polygon points="205,105 165,35 135,105" class="shape-reflection"></polygon>
+          <text x="112" y="12">axe</text>
+        </svg>
+        <p>La figure se retourne de l’autre côté de l’axe.</p>
+      </div>
+    </section>
+
+    <div class="lesson-layout">
+      <aside class="lesson-sidebar" aria-label="Dans cette leçon">
+        <p class="sidebar-title">DANS CETTE LEÇON</p>
+        <a href="#symetrie" class="sidebar-link active">Symétrie axiale</a>
+        <a href="#construction" class="sidebar-link">Construire le symétrique</a>
+        <a href="#agrandir" class="sidebar-link">Agrandir une figure</a>
+        <a href="#reduire" class="sidebar-link">Réduire une figure</a>
+        <a href="#exercices" class="sidebar-link">À toi de jouer</a>
+        <div class="sidebar-tip"><span aria-hidden="true">✳</span><p>Astuce : dans un agrandissement, toutes les longueurs sont multipliées par le même nombre.</p></div>
+      </aside>
+
+      <article class="lesson-content">
+        <section class="lesson-section" id="symetrie">
+          <p class="section-number">01 <span>LA SYMÉTRIE AXIALE</span></p>
+          <h2>Une figure et son reflet</h2>
+          <p>Une symétrie axiale transforme une figure comme si on la pliait le long d’une droite appelée <strong>axe de symétrie</strong>. L’image est retournée de l’autre côté de l’axe, à la même distance. La figure et son image ont la même forme et la même taille.</p>
+          <figure class="transform-figure">
+            <svg viewBox="0 0 360 170" role="img" aria-label="Un triangle et son symétrique de part et d’autre d’un axe vertical">
+              <line x1="180" y1="14" x2="180" y2="156" class="axis-line"></line>
+              <polygon points="45,135 105,35 150,135" class="shape-original"></polygon>
+              <polygon points="315,135 255,35 210,135" class="shape-reflection"></polygon>
+              <circle cx="105" cy="35" r="4" class="point-original"></circle>
+              <circle cx="255" cy="35" r="4" class="point-reflection"></circle>
+              <text x="171" y="13">axe</text><text x="97" y="27">A</text><text x="250" y="27">A′</text>
+            </svg>
+            <figcaption>Les points A et A′ sont à la même distance de l’axe.</figcaption>
+          </figure>
+          <p>Le symétrique d’un point A se note souvent A′ (« A prime »). Un point situé sur l’axe ne bouge pas : il est son propre symétrique.</p>
+        </section>
+
+        <section class="lesson-section" id="construction">
+          <p class="section-number">02 <span>CONSTRUIRE UN SYMÉTRIQUE</span></p>
+          <h2>Tracer l’image d’un point ou d’une figure</h2>
+          <p>Pour construire le symétrique d’un point, trace la perpendiculaire à l’axe qui passe par ce point. Mesure la distance entre le point et l’axe, puis reporte la même distance de l’autre côté. L’axe est alors la médiatrice du segment qui relie le point et son image.</p>
+          <div class="property-list">
+            <div class="property-card">
+              <span class="example-label">AVEC UNE RÈGLE ET UNE ÉQUERRE</span>
+              <strong>Perpendiculaire à l’axe, même distance de l’autre côté.</strong>
+              <p>Construis ainsi l’image de chaque sommet, puis relie les points images dans le même ordre pour obtenir la figure symétrique.</p>
+            </div>
+            <div class="property-card">
+              <span class="example-label">AVEC UN QUADRILLAGE</span>
+              <strong>Compte les carreaux jusqu’à l’axe et reporte-les.</strong>
+              <p>Si un point est à 3 carreaux de l’axe, son symétrique se place à 3 carreaux de l’autre côté, sur la même ligne perpendiculaire.</p>
+            </div>
+          </div>
+          <p>La symétrie conserve les longueurs et les angles : le symétrique d’un carré reste un carré de même taille.</p>
+        </section>
+
+        <section class="lesson-section" id="agrandir">
+          <p class="section-number">03 <span>L’AGRANDISSEMENT</span></p>
+          <h2>Agrandir une figure</h2>
+          <p>Un agrandissement conserve la forme de la figure et augmente toutes ses dimensions dans la même proportion. Le <strong>coefficient d’agrandissement</strong> est supérieur à 1. On multiplie chaque longueur par ce coefficient.</p>
+          <div class="transform-example">
+            <svg viewBox="0 0 360 150" role="img" aria-label="Un petit rectangle de 3 sur 2 et un rectangle agrandi de 6 sur 4">
+              <rect x="28" y="58" width="72" height="48" class="shape-original"></rect>
+              <rect x="183" y="34" width="144" height="96" class="shape-enlarged"></rect>
+              <text x="48" y="126">3 cm × 2 cm</text><text x="214" y="145">6 cm × 4 cm</text>
+              <text x="111" y="80">× 2</text>
+            </svg>
+          </div>
+          <div class="example-card">
+            <span class="example-label">COEFFICIENT 2</span>
+            <strong>3 cm × 2 cm → 6 cm × 4 cm</strong>
+            <p>Chaque longueur est multipliée par 2. Le périmètre est aussi multiplié par 2 ; la forme reste identique.</p>
+          </div>
+        </section>
+
+        <section class="lesson-section" id="reduire">
+          <p class="section-number">04 <span>LA RÉDUCTION</span></p>
+          <h2>Réduire une figure</h2>
+          <p>Une réduction conserve elle aussi la forme, mais rend toutes les longueurs plus petites. Son coefficient est compris entre 0 et 1. On multiplie chaque longueur par le coefficient de réduction.</p>
+          <div class="example-card">
+            <span class="example-label">COEFFICIENT 0,5 : LA MOITIÉ</span>
+            <strong>8 cm × 6 cm → 4 cm × 3 cm</strong>
+            <p>Chaque longueur est multipliée par 0,5, autrement dit divisée par 2. Les angles ne changent pas et les côtés correspondants gardent la même proportion.</p>
+          </div>
+          <p>Pour vérifier un agrandissement ou une réduction, compare les longueurs correspondantes : elles doivent toutes être multipliées par le même coefficient.</p>
+        </section>
+
+        <section class="lesson-section exercises" id="exercices">
+          <p class="section-number">05 <span>À TOI DE JOUER</span></p>
+          <h2>Vérifie ce que tu as retenu</h2>
+          <p>Réponds aux douze questions, puis vérifie tes réponses.</p>
+          <form id="quiz">
+            <fieldset class="question">
+              <legend><span>1</span> Comment s’appelle la droite le long de laquelle on plie une figure en symétrie axiale ?</legend>
+              <label class="answer-option"><input type="radio" name="q1" value="axe"> L’axe de symétrie</label>
+              <label class="answer-option"><input type="radio" name="q1" value="diagonale"> La diagonale</label>
+              <label class="answer-option"><input type="radio" name="q1" value="cote"> Le côté</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>2</span> Les deux points symétriques sont-ils à la même distance de l’axe ?</legend>
+              <label class="answer-option"><input type="radio" name="q2" value="oui"> Oui</label>
+              <label class="answer-option"><input type="radio" name="q2" value="non"> Non</label>
+              <label class="answer-option"><input type="radio" name="q2" value="parfois"> Seulement parfois</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>3</span> Quel instrument aide à tracer la perpendiculaire à l’axe ?</legend>
+              <label class="answer-option"><input type="radio" name="q3" value="equerre"> Une équerre</label>
+              <label class="answer-option"><input type="radio" name="q3" value="compas"> Un compas uniquement</label>
+              <label class="answer-option"><input type="radio" name="q3" value="rapporteur"> Un rapporteur uniquement</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>4</span> Que devient un point situé sur l’axe de symétrie ?</legend>
+              <label class="answer-option"><input type="radio" name="q4" value="fixe"> Il reste à la même place.</label>
+              <label class="answer-option"><input type="radio" name="q4" value="double"> Il se déplace deux fois plus loin.</label>
+              <label class="answer-option"><input type="radio" name="q4" value="disparait"> Il disparaît.</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>5</span> Une symétrie axiale change-t-elle la taille de la figure ?</legend>
+              <label class="answer-option"><input type="radio" name="q5" value="non"> Non, elle conserve la taille.</label>
+              <label class="answer-option"><input type="radio" name="q5" value="double"> Oui, elle la double.</label>
+              <label class="answer-option"><input type="radio" name="q5" value="moitie"> Oui, elle la réduit de moitié.</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>6</span> Quel coefficient correspond à un agrandissement ?</legend>
+              <label class="answer-option"><input type="radio" name="q6" value="2"> 2</label>
+              <label class="answer-option"><input type="radio" name="q6" value="0.5"> 0,5</label>
+              <label class="answer-option"><input type="radio" name="q6" value="1"> 1</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>7</span> Un côté de 4 cm est agrandi avec un coefficient 3. Quelle est sa nouvelle longueur ?</legend>
+              <label class="answer-option"><input type="radio" name="q7" value="12"> 12 cm</label>
+              <label class="answer-option"><input type="radio" name="q7" value="7"> 7 cm</label>
+              <label class="answer-option"><input type="radio" name="q7" value="1"> 1 cm</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>8</span> Un rectangle de 3 cm sur 2 cm est agrandi avec un coefficient 2. Quelles sont ses dimensions ?</legend>
+              <label class="answer-option"><input type="radio" name="q8" value="6x4"> 6 cm sur 4 cm</label>
+              <label class="answer-option"><input type="radio" name="q8" value="5x4"> 5 cm sur 4 cm</label>
+              <label class="answer-option"><input type="radio" name="q8" value="6x2"> 6 cm sur 2 cm</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>9</span> Quel coefficient correspond à une réduction de moitié ?</legend>
+              <label class="answer-option"><input type="radio" name="q9" value="0.5"> 0,5</label>
+              <label class="answer-option"><input type="radio" name="q9" value="2"> 2</label>
+              <label class="answer-option"><input type="radio" name="q9" value="10"> 10</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>10</span> Un côté de 8 cm est réduit avec un coefficient 0,5. Quelle est sa longueur ?</legend>
+              <label class="answer-option"><input type="radio" name="q10" value="4"> 4 cm</label>
+              <label class="answer-option"><input type="radio" name="q10" value="16"> 16 cm</label>
+              <label class="answer-option"><input type="radio" name="q10" value="7.5"> 7,5 cm</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>11</span> Dans un agrandissement, comment évoluent les angles ?</legend>
+              <label class="answer-option"><input type="radio" name="q11" value="conserves"> Ils restent de même mesure.</label>
+              <label class="answer-option"><input type="radio" name="q11" value="doubles"> Ils doublent toujours.</label>
+              <label class="answer-option"><input type="radio" name="q11" value="diminuent"> Ils diminuent toujours.</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend><span>12</span> Pour vérifier un agrandissement, que doit-on retrouver pour chaque longueur correspondante ?</legend>
+              <label class="answer-option"><input type="radio" name="q12" value="meme"> Le même coefficient multiplicateur</label>
+              <label class="answer-option"><input type="radio" name="q12" value="different"> Un coefficient différent</label>
+              <label class="answer-option"><input type="radio" name="q12" value="aucun"> Aucun rapport entre les longueurs</label>
+            </fieldset>
+            <button class="button button-primary check-button" type="submit">Vérifier mes réponses <span aria-hidden="true">→</span></button>
+            <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+      </article>
+    </div>
+
+    <nav class="next-course" aria-label="Navigation des cours">
+      <a href="../geometrie/"><span aria-hidden="true">←</span> Points, droites et angles</a>
+      <span>CM2 · Mathématiques</span>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="../../../../"><span class="brand-mark" aria-hidden="true">M</span><span>Mémento<span class="brand-period">.</span></span></a>
+    <span>Un petit pas, une grande idée.</span>
+  </footer>
+
+  <script src="./lesson.js"></script>
+</body>
+</html>
