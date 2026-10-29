@@ -1,0 +1,36 @@
+.solid-hero svg { width: 100%; max-height: 165px; margin-top: 12px; }
+.solid-face { stroke: var(--green-dark); stroke-width: 2.5; stroke-linejoin: round; }
+.top-face { fill: rgb(201 119 67 / 17%); }
+.side-face { fill: rgb(78 119 83 / 12%); }
+.front-face { fill: rgb(78 119 83 / 22%); }
+.solid-edge { stroke: var(--green-dark); stroke-width: 2.5; }
+.solid-point { fill: var(--orange); }
+.highlight-edge { stroke: var(--orange); stroke-width: 4; }
+.callout-line { stroke: var(--muted); stroke-width: 1.5; }
+.solid-hero text, .solid-figure text { fill: var(--ink); font-family: Manrope, "Segoe UI", sans-serif; font-size: 12px; font-weight: 700; }
+
+.solid-figure { margin: 18px 0; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.solid-figure svg { width: 100%; max-height: 190px; display: block; }
+.solid-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 0.72rem; line-height: 1.5; text-align: center; }
+.solid-figure figcaption strong { color: var(--green-dark); }
+.solid-grid { margin: 18px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.solid-grid .solid-figure { margin: 0; }
+.round-top { fill: rgb(201 119 67 / 15%); stroke: var(--green-dark); stroke-width: 2.5; }
+.round-side { fill: none; stroke: var(--green-dark); stroke-width: 2.5; }
+.round-bottom { fill: none; stroke: var(--green-dark); stroke-width: 2.5; }
+.round-hidden { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.sphere-shape { fill: rgb(78 119 83 / 16%); stroke: var(--green-dark); stroke-width: 2.5; }
+.sphere-equator { fill: none; stroke: var(--orange); stroke-width: 2; }
+.net-square { fill: rgb(78 119 83 / 12%); stroke: var(--green-dark); stroke-width: 2; }
+.net-figure { max-width: 420px; }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
+
+@media (max-width: 520px) {
+  .solid-grid { grid-template-columns: 1fr; }
+  .solid-figure { padding: 10px; }
+}
