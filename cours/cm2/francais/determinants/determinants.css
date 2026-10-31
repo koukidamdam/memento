@@ -1,0 +1,20 @@
+.determinant-art {
+  margin: 15px auto 0;
+  padding: 18px 12px;
+  color: var(--green-dark);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.determinant-art p { margin: 10px 0; }
+.determinant-art > span:last-child { color: #647064; font-size: 0.76rem; }
+.determinant-art strong { color: var(--orange); }
+
+.property-list { margin: 18px 0; display: grid; gap: 11px; }
+.property-card { padding: 15px 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.property-card .example-label { margin-bottom: 6px; }
+.property-card > strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; font-size: 1.05rem; }
+.property-card p { margin: 5px 0 0; color: #5f625b; font-size: 0.78rem; line-height: 1.6; }
