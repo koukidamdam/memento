@@ -1,0 +1,39 @@
+.napoleon-art {
+  margin: 15px auto 0;
+  color: var(--green-dark);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.napoleon-art p { margin: 18px 0 8px; font-size: 1.15rem; }
+.napoleon-art strong { color: var(--orange); }
+.napoleon-art > span:last-child { color: #647064; font-size: 0.76rem; }
+
+.timeline {
+  margin: 22px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+}
+
+.timeline > div {
+  padding: 12px;
+  display: grid;
+  gap: 5px;
+  border-top: 2px solid var(--orange);
+  background: #f0f1eb;
+}
+
+.timeline strong { color: var(--green-dark); font-family: Manrope, "Segoe UI", sans-serif; }
+.timeline span { color: #5f625b; font-size: 0.7rem; line-height: 1.5; }
+
+.source-note {
+  padding: 22px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 5px;
+  background: var(--paper);
+}
+
+.source-note h2 { font-size: 1.3rem; }
+.source-note p { color: #5f625b; font-size: 0.8rem; line-height: 1.7; }
+.source-note a { color: var(--green-dark); font-weight: 700; }
