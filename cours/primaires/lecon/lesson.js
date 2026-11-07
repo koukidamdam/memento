@@ -1,14 +1,17 @@
 const primaryCourseData = [
   ...window.primaryMathLessons,
   ...window.primaryFrenchLessons,
-  ...window.primaryHistoryLessons
+  ...window.primaryHistoryLessons,
+  ...window.secondaryCourseLessons
 ];
 const primaryPracticeQuestions = window.primaryPracticeQuestions;
+const secondaryRevisionQuestions = window.secondaryRevisionQuestions;
 const primaryLevelNames = {
   cp: "CP",
   ce1: "CE1",
   ce2: "CE2",
-  cm1: "CM1"
+  cm1: "CM1",
+  ...window.secondaryLevelNames
 };
 const courseParameters = new URLSearchParams(window.location.search);
 const selectedLevel = courseParameters.get("classe");
@@ -48,7 +51,11 @@ const title = escapeHtml(selectedContent.title);
 const summary = escapeHtml(selectedContent.summary);
 const explanation = escapeHtml(selectedContent.explanation);
 const example = escapeHtml(selectedContent.example);
-const subjectPractice = primaryPracticeQuestions[selectedLevel][selectedLesson.subject];
+const subjectPractice = primaryPracticeQuestions[selectedLevel]?.[selectedLesson.subject]
+  ?? secondaryRevisionQuestions[selectedLevel]?.[selectedLesson.subject];
+if (!subjectPractice || subjectPractice.length !== 5) {
+  throw new Error(`Missing revision questions: ${selectedLevel}/${selectedLesson.subject}`);
+}
 const questions = [
   selectedContent,
   ...subjectPractice

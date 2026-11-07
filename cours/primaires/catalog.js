@@ -1,20 +1,29 @@
 (function addPrimaryCourseCards() {
-  const primaryCourseLevels = [
+  const schoolLevels = [
     ["cp", "CP"],
     ["ce1", "CE1"],
     ["ce2", "CE2"],
-    ["cm1", "CM1"]
+    ["cm1", "CM1"],
+    ["6e", "6e"],
+    ["5e", "5e"],
+    ["4e", "4e"],
+    ["3e", "3e"],
+    ["2nde", "2nde"],
+    ["premiere", "Première"],
+    ["terminale", "Terminale"]
   ];
-  const primaryLessons = [
+  const schoolLessons = [
     ...window.primaryMathLessons,
     ...window.primaryFrenchLessons,
-    ...window.primaryHistoryLessons
+    ...window.primaryHistoryLessons,
+    ...window.secondaryCourseLessons
   ];
   const courseList = document.querySelector("#course-list");
   const emptyState = document.querySelector("#empty-state");
 
-  for (const lesson of primaryLessons) {
-    for (const [year, levelName] of primaryCourseLevels) {
+  for (const lesson of schoolLessons) {
+    const applicableLevels = schoolLevels.filter(([year]) => lesson.levels[year]);
+    for (const [year, levelName] of applicableLevels) {
       const levelLesson = lesson.levels[year];
       const card = document.createElement("a");
       card.className = "course-card";
